@@ -15,19 +15,22 @@
 <body>
     <div id="app">
         <div class="book-container">
-            <ul>
+            
+            <ul class="list" v-if="!this.switch">
                 <li v-for="(value, index) in book" :key="value">
                     {{ index }} : {{ value }}
                 </li>
             </ul>
-            <button @click="editBook">Modifica Libro</button>
+            <form class="form" v-else >
+                <h1 class="title">IL TUO LIBRO</h1>
+                <input  v-model="book.title"  type="text">
+                <input  v-model="book.author"  type="text">
+                <input  v-model="book.year"  type="text">
+                <input  v-model="book.description"  type="text">
+            </form>
+            <button class="btn" @click="editBook">Modifica Libro</button>
         </div>
-        <form action="">
-            <input  v-model="newValue.title"  type="text">
-            <input  v-model="newValue.author"  type="text">
-            <input  v-model="newValue.year"  type="text">
-            <input  v-model="newValue.description"  type="text">
-        </form>
+     
         
     </div>
 </body>

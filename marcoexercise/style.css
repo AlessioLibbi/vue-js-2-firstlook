@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-container {
+    margin-top: 50%;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    width: 100%;
+    list-style: none;
+}
+.list li {
+    padding: 30px;
+    font-size: 20px;
+}
+
+.btn {
+    background-color: red;
+    padding: 10px;
+    font-size: 20px;
+}
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    margin: 10px;
+    font-size: 20px;
+}
+.title {
+    align-self: center;
+}

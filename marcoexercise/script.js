@@ -7,18 +7,15 @@ const app = Vue.createApp({
                 year: 2003,
                 description: ' La storia di amore non ricambiata da parte del Autore con Beatrice'
             },
-            newValue : {
-                title: "",
-                author: "",
-                year: "",
-                description: ""
-            }
+            switch: false,
+          
         }
     },
     methods: {
         editBook() {
-            this.book += this.newValue.title
+            this.switch = !this.switch
         }
+        
     }
 })
 
