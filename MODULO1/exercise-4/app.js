@@ -3,14 +3,16 @@ const app = Vue.createApp({
         return {
             inputValue : "",
             secondValue: true,
+            backgroundColorAss : ""
         }
     },
     computed: {
-        inputValue() {
-            if(this.inputValue == "user1"){
-                return {active: user1, visible: this.secondValue, hidden: this.secondValue}
-            } else if(this.inputValue == "user2") {
-                return {active: user2}
+        inputvalue() {
+            return {
+                user1: this.inputValue === 'user1',
+                user2: this.inputValue === 'user2',
+                visible: this.secondValue,
+                hidden: !this.secondValue,
             }
         }
     },
